@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a:hover{
+    color: white
+}
+.carousel-inner .carousel-caption{
+    background: rgba(200, 200, 200, 0.3);
+    border-radius: 7px;
+}
+.icon{
+    height:25px;
+    width: 25px;
+    border: 1.2px solid black;
+    border-radius: 50%;
+}
+.navbar-brand{
+    transition: 0.4s;
+}
+.navbar-brand:hover{
+    text-shadow: 10px 10px 20px white,
+                -10px -10px 20px white;
+}
+.dropdown-menu li a{
+    text-shadow: 1px 1px 0px black;
+}
+
+.fixedimg1{
+    background-image: url(../images/thumb-1920-829149.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 230px;
+    width: 100%;
+}
+.fixedimg2{
+    background-image: url(../images/mercedes-amg-gtr-4k-2021-q7.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 230px;
+    width: 100%;
+}
+.btnbefore{
+    position: relative;
+    left: 30px;
+}
+.btnbefore::before{
+    position: absolute;
+    content: "";
+    border-width: 10px;
+    border-style:solid;
+    border-color: transparent transparent lightblue transparent;
+    top: 20px;
+    left: 13px;
+    display: none;
+}
+.btnbefore::after{
+    position: absolute;
+    content: " ";
+    height: 40px;
+    width: 80px;
+    background-color: lightblue;
+    top: 40px;
+    left: -15px;
+    border-radius: 5px;
+    display: none;
+}
+.btnbefore:active::before , .btn:hover::before{
+    display: block;
+
+}
+.btnbefore:hover::after{
+    content: "copy to clipboard";
+    display: block;
+}
+.btnbefore:active::after{
+    content: "copied";
+    display: block;
+    height: 25px;
+}
